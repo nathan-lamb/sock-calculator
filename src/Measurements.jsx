@@ -17,7 +17,7 @@ class Measurements extends React.Component {
     return (
       <div>
         <h1>Measurements</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           Foot Circumference:
           <input type="text"/><br></br>
           Ankle Circumeference:
@@ -32,7 +32,7 @@ class Measurements extends React.Component {
           <input type="text"/><br></br>
           Toe Length:
           <input type="text"/><br></br>
-          <input type="submit"/>
+          <input type="submit" value="Submit"/>
         </form>
       </div>
     )

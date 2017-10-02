@@ -4,13 +4,6 @@ class Measurements extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      footCircumference: [],
-      ankleCircumference: [],
-      gussetCircumference: [],
-      footLength: [],
-      lowerCalf: [],
-      heelDiagonal: [],
-      toeLength: []
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -22,6 +15,10 @@ class Measurements extends React.Component {
     this.setState({
       [name]: value
     })
+    event.preventDefault()
+  }
+
+  componentDidMount () {
     console.log(this.state)
   }
   render () {
